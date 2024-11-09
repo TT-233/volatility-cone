@@ -13,7 +13,7 @@ A volatility cone is a tool used to predict the range of future price fluctuatio
 
 ## Installation Guide
 
-**Clone the repository**: Download the project from GitHub to your local machine.
+**Clone the repository**
    ```bash
    git clone https://github.com/username/volatility-cone.git
    cd volatility-cone
