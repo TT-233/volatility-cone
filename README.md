@@ -10,36 +10,6 @@ A volatility cone is a tool used to predict the range of future price fluctuatio
 - **Implied Volatility Data Collection**: Use VIX data from CBOE as a base for constructing the implied volatility cone.
 - **Volatility Cone Calculation**: Construct 1-month, 3-month, and 6-month historical volatility cones and implied volatility cones.
 - **Visualization and Analysis**: Display trends in historical and implied volatilities through charts for intuitive analysis.
-
-## Installation Guide
-
-**Clone the repository**
-   ```bash
-   git clone https://github.com/username/volatility-cone.git
-   cd volatility-cone
-   pip install -r requirements.txt
-   ```
-
-## Data Collection
-
-1. Collect Historical Price Data
-
-**Use the yfinance library to download historical price data of the S&P 500 index from Yahoo Finance.**
-   ```bash
-  import yfinance as yf
-
-  # Retrieve historical data for the S&P 500 index
-  sp500 = yf.Ticker("^GSPC")
-  data = sp500.history(period="5y")  # Get the past 5 years of data
-  data.to_csv("data/sp500_data.csv")  # Save as CSV file
- ```
-
-2. Collect Implied Volatility Data
- 
- **Download VIX data from the CBOE website and save it as vix_data.csv. The VIX data will represent overall market implied volatility.**
-
- [Google](https://www.cboe.com)
-
    
 ## Directory Structure
 ```plaintext
@@ -77,6 +47,27 @@ volatility-cone/
 
  - Use Matplotlib to plot both historical and implied volatility cones.
  - Save the charts to the results folder.
+
+## Data Collection
+
+1. Collect Historical Price Data
+
+**Use the yfinance library to download historical price data of the S&P 500 index from Yahoo Finance.**
+   ```bash
+  import yfinance as yf
+
+  # Retrieve historical data for the S&P 500 index
+  sp500 = yf.Ticker("^GSPC")
+  data = sp500.history(period="5y")  # Get the past 5 years of data
+  data.to_csv("data/sp500_data.csv")  # Save as CSV file
+ ```
+
+2. Collect Implied Volatility Data
+ 
+ **Download VIX data from the CBOE website and save it as vix_data.csv. The VIX data will represent overall market implied volatility.**
+
+ [Google](https://www.cboe.com)
+
 
 ## File Descriptions
 
