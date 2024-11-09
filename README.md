@@ -13,7 +13,7 @@ A volatility cone is a tool used to predict the range of future price fluctuatio
 
 ## Installation Guide
 
-** Clone the repository**: Download the project from GitHub to your local machine.
+**Clone the repository**: Download the project from GitHub to your local machine.
    ```bash
    git clone https://github.com/username/volatility-cone.git
    cd volatility-cone
@@ -24,7 +24,7 @@ A volatility cone is a tool used to predict the range of future price fluctuatio
 
 1. Collect Historical Price Data
 
-** Use the yfinance library to download historical price data of the S&P 500 index from Yahoo Finance.
+**Use the yfinance library to download historical price data of the S&P 500 index from Yahoo Finance.**
    ```bash
   import yfinance as yf
 
@@ -36,7 +36,7 @@ A volatility cone is a tool used to predict the range of future price fluctuatio
 
 2. Collect Implied Volatility Data
  
- ** Download VIX data from the CBOE website and save it as vix_data.csv. The VIX data will represent overall market implied volatility.
+ **Download VIX data from the CBOE website and save it as vix_data.csv. The VIX data will represent overall market implied volatility.**
 
  [Google](https://www.cboe.com)
 
@@ -58,22 +58,22 @@ volatility-cone/
 
 ## Analysis Workflow
 
-1. **Data Cleaning and Processing
+1. **Data Cleaning and Processing**
 
  - Format the retrieved S&P 500 and VIX data, ensuring consistency in the time series.
  - Remove missing values and outliers, and standardize date formats.
 
-2. **Calculate Historical Volatility Cone
+2. **Calculate Historical Volatility Cone**
 
  - Calculate 1-month, 3-month, and 6-month historical volatilities using a rolling window method and annualize the results.
  - Plot the volatility cone for each time frame to analyze the historical volatility range.
 
-3. **Construct Implied Volatility Cone
+3. **Construct Implied Volatility Cone**
 
  - Use the VIX data to construct the implied volatility cone.
  - Compare the implied volatility cone with the historical volatility cone to analyze differences between market expectations and historical volatilities.
 
-4. **Visualization
+4. **Visualization**
 
  - Use Matplotlib to plot both historical and implied volatility cones.
  - Save the charts to the results folder.
