@@ -26,28 +26,6 @@ volatility-cone/
 └── requirements.txt          # Project dependency file
 ```
 
-## Analysis Workflow
-
-1. **Data Cleaning and Processing**
-
- - Format the retrieved S&P 500 and VIX data, ensuring consistency in the time series.
- - Remove missing values and outliers, and standardize date formats.
-
-2. **Calculate Historical Volatility Cone**
-
- - Calculate 1-month, 3-month, and 6-month historical volatilities using a rolling window method and annualize the results.
- - Plot the volatility cone for each time frame to analyze the historical volatility range.
-
-3. **Construct Implied Volatility Cone**
-
- - Use the VIX data to construct the implied volatility cone.
- - Compare the implied volatility cone with the historical volatility cone to analyze differences between market expectations and historical volatilities.
-
-4. **Visualization**
-
- - Use Matplotlib to plot both historical and implied volatility cones.
- - Save the charts to the results folder.
-
 ## Data Collection
 
 1. Collect Historical Price Data
@@ -75,6 +53,30 @@ volatility-cone/
 - data_processing.py: Data cleaning and preprocessing module.
 - volatility_cone.py: Contains calculations and methods for building the volatility cone model.
 - requirements.txt: List of Python dependencies required to run the project.
+
+## Analysis Workflow
+
+1. **Data Cleaning and Processing**
+
+ - Format the retrieved S&P 500 and VIX data, ensuring consistency in the time series.
+ - Remove missing values and outliers, and standardize date formats.
+
+2. **Calculate Historical Volatility Cone**
+
+ - Calculate 1-month, 3-month, and 6-month historical volatilities using a rolling window method and annualize the results.
+ - Plot the volatility cone for each time frame to analyze the historical volatility range.
+
+3. **Construct Implied Volatility Cone**
+
+ - Use the VIX data to construct the implied volatility cone.
+ - Compare the implied volatility cone with the historical volatility cone to analyze differences between market expectations and historical volatilities.
+
+4. **Visualization**
+
+ - Use Matplotlib to plot both historical and implied volatility cones.
+ - Save the charts to the results folder.
+
+
 
 
 
