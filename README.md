@@ -74,4 +74,4 @@ volatility-cone/
 
 Below is the output of the project:
 
-![Volatility Cone Result](results/vix_volatility_cone.png)
+![Volatility Cone Result](result/vix_volatility_cone.png)
