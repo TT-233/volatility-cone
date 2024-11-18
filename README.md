@@ -21,7 +21,7 @@ volatility-cone/
 │   └── main.py                 # Module for volatility cone calculations and analysis
 ├── results/                    # Folder for output results and charts
 │   ├── VIX_volatility.csv 
-│   └── vix_volatility_cone.png #Generated graphs and analysis outputs.
+│   └── volatility_cone.png #Generated graphs and analysis outputs.
 ├── README.md                   # Project description file
 └── requirements.txt            # Project dependency file
 ```
@@ -74,4 +74,4 @@ volatility-cone/
 
 Below is the output of the project:
 
-![Volatility Cone Result](result/vix_volatility_cone.png)
+![Volatility Cone Result](result/volatility_cone.png)
