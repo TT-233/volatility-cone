@@ -14,15 +14,16 @@ A volatility cone is a tool used to predict the range of future price fluctuatio
 ## Directory Structure
 ```plaintext
 volatility-cone/
-├── data/                     # Folder for data files
-│   ├── sp500_data.csv        # Historical price data of the S&P 500
-│   └── vix_data.csv          # VIX historical implied volatility data
-├── src/                      # Source code folder
-│   └── volatility_cone.py    # Module for volatility cone calculations and analysis
-├── results/                  # Folder for output results and charts
+├── data/                       # Folder for data files
+│   ├── sp500_data.csv          # Historical price data of the S&P 500
+│   └── vix_data.csv            # VIX historical implied volatility data
+├── src/                        # Source code folder
+│   └── main.py                 # Module for volatility cone calculations and analysis
+├── results/                    # Folder for output results and charts
+│   ├── VIX_volatility.csv 
 │   └── vix_volatility_cone.png #Generated graphs and analysis outputs.
-├── README.md                 # Project description file
-└── requirements.txt          # Project dependency file
+├── README.md                   # Project description file
+└── requirements.txt            # Project dependency file
 ```
 
 
@@ -73,4 +74,4 @@ volatility-cone/
 
 Below is the output of the project:
 
-![Volatility Cone Result](results/result.png)
+![Volatility Cone Result](results/vix_volatility_cone.png)
