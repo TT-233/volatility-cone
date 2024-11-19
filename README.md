@@ -1,32 +1,21 @@
 # Volatility Cone Data Analysis 
+
 ## Overview
-This project analyzes the volatility characteristics of financial markets by comparing **historical implied volatility** (VIX) and **implied volatility** (SPY options). Using VIX data to construct rolling volatility cones and SPY options to compute implied volatility, the analysis aims to explore market sentiment, identify potential risks, and provide insights into market expectations.
+This project analyzes the volatility characteristics of financial markets by comparing **historical implied volatility** (VIX) and **implied volatility** (SPY options). Using VIX data to construct rolling volatility cones and SPY options to compute implied volatility, it examines whether VIX and SPY implied volatility are consistent, revealing potential discrepancies between overall market volatility expectations and specific asset volatility expectations. Additionally, the analysis aims to explore market sentiment, identify potential risks, and provide insights into market expectations. 
 
 ## Objectives
 1. **Historical Volatility (VIX) Analysis**:
-   - Calculate rolling volatilities over different time windows (21, 63, 126 days) using VIX data.
+   - Calculate **rolling volatilities** over different time windows (21, 63, 126 days) using VIX data.
    - Compute quantiles (10%, 50%, 90%) to construct a volatility cone and analyze the historical range of implied volatility expectations.
 
 2. **Implied Volatility (SPY Options) Analysis**:
-   - Retrieve SPY options data and calculate implied volatility using the Black-Scholes model.
+   - Retrieve SPY options data and calculate implied volatility using the **Black-Scholes model**.
    - Compare SPY implied volatility quantiles with historical implied volatility quantiles from VIX.
 
 3. **Visualization**:
-   - Create combined plots of historical volatility cones (VIX) and SPY implied volatility to highlight trends, market expectations, and anomalies.
-
-## Features
- **VIX Rolling Volatility Analysis**:
-   - Use VIX data to compute annualized rolling volatilities for short-term (21 days), medium-term (63 days), and long-term (126 days) windows.
-   - Generate quantiles (10%, 50%, 90%) to construct the historical implied volatility cone.
-
- **SPY Implied Volatility Analysis**:
-   - Retrieve SPY options data for the nearest expiration date.
-   - Calculate implied volatility using the Black-Scholes model, considering key parameters such as strike price, market price, and time to expiration.
-   - Compute quantiles (10%, 50%, 90%) of SPY implied volatility for comparison with VIX-based volatility cones.
-
- **Visualization**:
-   - Overlay historical implied volatility (VIX) and SPY implied volatility quantiles on a single graph.
+    - Overlay historical implied volatility (VIX) and SPY implied volatility quantiles on a single graph.
    - Provide insights into market sentiment and identify deviations from historical norms.
+
 
 
 ## Directory Structure
@@ -56,7 +45,8 @@ import yfinance as yf
 print("download VIX data...")
 vix_data = yf.download('^VIX', start='YYYY-MM-DD', end='YYYY-MM-DD')
 ```
-
+**SPY Data**
+-
  
 #### **ALSO CAN check VIX data from the CBOE website and save it as vix_data.csv. The VIX data will represent overall market implied volatility.**
 
