@@ -36,12 +36,11 @@ volatility-cone/
 ## Data Collection
 
 This project collects and processes two main datasets: **VIX data** and **SPY options data**.
+- The data of them can be retrieved using the `yfinance` library from Yahoo Finance.
 
 **VIX Data**
-- VIX data is retrieved using the `yfinance` library from Yahoo Finance.
 ```python
 import yfinance as yf
-
 print("download VIX data...")
 vix_data = yf.download('^VIX', start='YYYY-MM-DD', end='YYYY-MM-DD')
 ```
