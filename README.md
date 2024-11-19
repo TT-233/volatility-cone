@@ -5,15 +5,15 @@ This project analyzes volatility characteristics in financial markets using both
 
 ## Features
 
-1. **Historical Volatility Calculation**:
+ **Historical Volatility Calculation**:
    - Use rolling windows (21, 63, 126 days) to compute annualized volatility from VIX data.
    - Calculate and visualize quantiles (10%, 50%, 90%) of historical volatilities.
 
-2. **Implied Volatility Calculation**:
+ **Implied Volatility Calculation**:
    - Retrieve SPY options data and calculate implied volatility using the Black-Scholes model.
    - Filter expired contracts and calculate quantiles (10%, 50%, 90%) for implied volatility.
 
-3. **Volatility Cone Construction**:
+ **Volatility Cone Construction**:
    - Overlay historical volatility and implied volatility quantiles on a single graph.
    - Provide insights into market volatility trends over different time frames.
 
