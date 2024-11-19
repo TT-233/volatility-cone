@@ -1,21 +1,27 @@
 # Volatility Cone Data Analysis Project
+## Overview
 
-We aims to analyze volatility characteristics in financial markets using the Volatility Cone model. By collecting historical price data and implied volatility data for options, we construct volatility cones over different time periods to aid in risk management and trading strategy decisions.
-
-## Project Background
-A volatility cone is a tool used to predict the range of future price fluctuations based on historical data and market expectations of future volatility. By analyzing volatilities over different time frames, it provides a more reliable risk forecast. In this project, we use the historical price data of the S&P 500 index and the VIX index as a proxy for implied market volatility to construct the volatility cone model.
+This project analyzes volatility characteristics in financial markets using both historical volatility and implied volatility data. By constructing volatility cones over different time periods, the project aims to assist in risk management and trading strategy decisions. The analysis is performed using the VIX index for historical volatility and SPY options data for implied volatility.
 
 ## Features
-- **Historical Price Data Collection**: Retrieve historical data of the S&P 500 index from Yahoo Finance to calculate historical volatilities over different time periods.
-- **Implied Volatility Data Collection**: Use VIX data from CBOE as a base for constructing the implied volatility cone.
-- **Volatility Cone Calculation**: Construct 1-month, 3-month, and 6-month historical volatility cones and implied volatility cones.
-- **Visualization and Analysis**: Display trends in historical and implied volatilities through charts for intuitive analysis.
-   
+
+1. **Historical Volatility Calculation**:
+   - Use rolling windows (21, 63, 126 days) to compute annualized volatility from VIX data.
+   - Calculate and visualize quantiles (10%, 50%, 90%) of historical volatilities.
+
+2. **Implied Volatility Calculation**:
+   - Retrieve SPY options data and calculate implied volatility using the Black-Scholes model.
+   - Filter expired contracts and calculate quantiles (10%, 50%, 90%) for implied volatility.
+
+3. **Volatility Cone Construction**:
+   - Overlay historical volatility and implied volatility quantiles on a single graph.
+   - Provide insights into market volatility trends over different time frames.
+
+
 ## Directory Structure
 ```plaintext
 volatility-cone/
 ├── data/                       # Folder for data files
-│   ├── sp500_data.csv          # Historical price data of the S&P 500
 │   └── vix_data.csv            # VIX historical implied volatility data
 ├── src/                        # Source code folder
 │   └── main.py                 # Module for volatility cone calculations and analysis
@@ -51,27 +57,31 @@ volatility-cone/
 ## Analysis Workflow
 
 1. **Data Cleaning and Processing**
-
- - Format the retrieved S&P 500 and VIX data, ensuring consistency in the time series.
- - Remove missing values and outliers, and standardize date formats.
+   - Download VIX data (`^VIX`) to represent historical volatility.
+   - Remove missing values using `.dropna()` to ensure data consistency.
 
 2. **Calculate Historical Volatility Cone**
-
- - Calculate 1-month, 3-month, and 6-month historical volatilities using a rolling window method and annualize the results.
- - Plot the volatility cone for each time frame to analyze the historical volatility range.
+   - Use 1-month (21 days), 3-month (63 days), and 6-month (126 days) rolling windows to calculate annualized historical volatilities.
+   - Compute quantiles (10%, 50%, 90%) for each time frame to construct the historical volatility cone.
 
 3. **Construct Implied Volatility Cone**
-
- - Use the VIX data to construct the implied volatility cone.
- - Compare the implied volatility cone with the historical volatility cone to analyze differences between market expectations and historical volatilities.
+   - Retrieve SPY options data and calculate implied volatilities using the Black-Scholes model.
+   - Compute quantiles (10%, 50%, 90%) for implied volatility to construct the implied volatility cone.
 
 4. **Visualization**
-
- - Use Matplotlib to plot both historical and implied volatility cones.
- - Save the charts to the results folder.
+   - Save the results to an output folder for further analysis.
 
 ## Example Result
 
 Below is the output of the project:
 
 ![Volatility Cone Result](result/volatility_cone.png)
+
+
+---
+
+---
+
+
+---
+
