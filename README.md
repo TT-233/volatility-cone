@@ -1,4 +1,4 @@
-# Volatility Cone Data Analysis Project
+# Volatility Cone Data Analysis 
 ## Overview
 
 This project analyzes volatility characteristics in financial markets using both historical volatility and implied volatility data. By constructing volatility cones over different time periods, the project aims to assist in risk management and trading strategy decisions. The analysis is performed using the VIX index for historical volatility and SPY options data for implied volatility.
