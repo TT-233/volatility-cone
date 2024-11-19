@@ -50,7 +50,7 @@ vix_data = yf.download('^VIX', start='YYYY-MM-DD', end='YYYY-MM-DD')
 options = stock.option_chain(next_expiration)
 calls = options.calls
 ```
-**ALSO CAN check VIX data from the CBOE website and save it as vix_data.csv. The VIX data will represent overall market implied volatility.**
+ALSO CAN check VIX data from the CBOE website and save it as vix_data.csv. The VIX data will represent overall market implied volatility.
 
  [Google](https://www.cboe.com)
 
