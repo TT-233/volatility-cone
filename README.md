@@ -35,21 +35,24 @@ volatility-cone/
 
 ## Data Collection
 
-1. Collect Historical Price Data
+This project collects and processes two main datasets: **VIX data** and **SPY options data**.
 
-**Use the yfinance library to download historical price data of the S&P 500 index from Yahoo Finance.**
-   ```bash
-  import yfinance as yf
+### **1. VIX Data (Historical Volatility)**
 
-  # Retrieve historical data for the S&P 500 index
-  sp500 = yf.Ticker("^GSPC")
-  data = sp500.history(period="5y")  # Get the past 5 years of data
-  data.to_csv("data/sp500_data.csv")  # Save as CSV file
- ```
+#### **Source**
+- VIX data is retrieved using the `yfinance` library from Yahoo Finance.
 
-2. Collect Implied Volatility Data
+ **Download Code**
+```python
+import yfinance as yf
+
+print("download VIX data...")
+vix_data = yf.download('^VIX', start='2020-01-01', end='2024-01-01')
+```
+
+### **2.  Collect Implied Volatility Data
  
- **Download VIX data from the CBOE website and save it as vix_data.csv. The VIX data will represent overall market implied volatility.**
+#### **Download VIX data from the CBOE website and save it as vix_data.csv. The VIX data will represent overall market implied volatility.**
 
  [Google](https://www.cboe.com)
 
