@@ -27,7 +27,7 @@ volatility-cone/
 ├── data/                       # Folder for data files
 │   └── vix_data.csv            # VIX historical implied volatility data
 ├── src/                        # Source code folder
-│   └──Volatility Cone.py      # Module for volatility cone calculations and analysis
+│   └──Volatility Cone.py       # Module for volatility cone calculations and analysis
 ├── results/                    # Folder for output results and charts
 │   └── volatility_cone.png     # Generated graph
 └── README.md                   # Project description file
