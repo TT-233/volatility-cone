@@ -8,7 +8,7 @@ This project analyzes the volatility characteristics of financial markets by com
    - Calculate **rolling volatilities** over different time windows (21, 42, 63, 126, 189 days) using VIX data.
    - Compute quantiles (25%, 50%, 75%) to construct a volatility cone and analyze the historical range of implied volatility expectations.
 
-2. **Realized Volatility (SPY Historical Data) Analysis:**:
+2. **Realized Volatility (SPY Historical Data) Analysis**:
    - Retrieve SPY historical data and calculate realized volatility using daily returns..
    - Compare SPY realized volatility levels with historical implied volatility quantiles from VIX.
 
