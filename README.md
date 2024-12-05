@@ -27,9 +27,8 @@ volatility-cone/
 ├── data/                       # Folder for data files
 │   └── vix_data.csv            # VIX historical implied volatility data
 ├── src/                        # Source code folder
-│   └── volatility_cone.py      # Module for volatility cone calculations and analysis
+│   └──Volatility Cone.py      # Module for volatility cone calculations and analysis
 ├── results/                    # Folder for output results and charts
-│   ├── volatility_cone.csv     # Processed results of volatility cone data
 │   └── volatility_cone.png     # Generated graph
 └── README.md                   # Project description file
 ```
@@ -96,6 +95,5 @@ The output of this project is a volatility cone chart, which compares VIX rollin
    - Periods where SPY's realized volatility is significantly below VIX quantiles may suggest opportunities to sell options.
    - Conversely, when realized volatility exceeds implied volatility, it may indicate undervalued volatility.
 
-# 测试结果
-![output](outputs/volatility_cone_dynamic_test.png)
+![output](volatility_cone_dynamic_test.png)
 ---
